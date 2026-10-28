@@ -8,7 +8,7 @@
     {
       "@id": "https://repolex.ai/r/xarray-contrib/xvec/commit/6379e7bd2129a8796acac34ae63d026241c8c760",
       "git:hexsha": "6379e7bd2129a8796acac34ae63d026241c8c760",
-      "repolex:parseStatus": "metadata_complete"
+      "repolex:parseStatus": "ast_complete"
     },
     {
       "@id": "https://repolex.ai/r/xarray-contrib/xvec/commit/192b2b1f4d0c59f51f916cca9987d27153336619",
