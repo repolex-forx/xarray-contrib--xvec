@@ -1,1 +1,134 @@
-Initializing
+# Repolex Knowledge Graph of xarray-contrib/xvec
+
+RDF knowledge graph data for [xarray-contrib/xvec](https://github.com/xarray-contrib/xvec), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download xarray-contrib/xvec
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 6379e7bd2129a8796acac34ae63d026241c8c760
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 6379e7bd2129a8796acac34ae63d026241c8c760
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 04cb74b52026eed27a292ffaf7979dd2c6cf13e4.nq.gz
+│   ├── 065ef740ed6675c253e7d1904e23ee44eb0b565e.nq.gz
+│   ├── 06c0a8006b7f3f535f1d0e83155070546c76efcc.nq.gz
+│   ├── 10b504313bb5d9b24a725008530cc218eaa28e4c.nq.gz
+│   ├── 17459de573a5227e8593d7ec4a9c135dd049b3c5.nq.gz
+│   ├── 1cc1b31a8334e91cdc9a088a819b6172d26a1fca.nq.gz
+│   ├── 1dbffc09e6e11581f67f9f68a73bf402d2b288c6.nq.gz
+│   ├── 2007c2bc7a97c044e3843057207ca3598233aede.nq.gz
+│   ├── 2026b850e154fa3d37ddb1dde91f40ad23b0eca1.nq.gz
+│   ├── 2b7963f2f95daccafeab53f4b9a18ebdfa3fd57d.nq.gz
+│   ├── 30ec8683124e3faa3ef12ce5eb791adb19fb3385.nq.gz
+│   ├── 311c736b57d716a0990c9dfe5cb72940e34ece85.nq.gz
+│   ├── 38bc3f3547b6e8635361598cbbd31102cf6cb9c3.nq.gz
+│   ├── 433a5f43138159f2d58c212ee865832ff06ee640.nq.gz
+│   ├── 461f8f30dd32ca8e0a39a0dc3bc8d446208c8ff8.nq.gz
+│   ├── 47f24d9907bd58d6890b620970ca56c7552eb857.nq.gz
+│   ├── 4a729781e9375e3f36af1d1cff005d4d188853b4.nq.gz
+│   ├── 54c73bf7c643170945a89994c23572d4b2e405fa.nq.gz
+│   ├── 55bbab5d7f578930c0c391bd67a4e46c46351301.nq.gz
+│   ├── 584d4ed0c0995f45a2b24fb689f2a30c63ed0034.nq.gz
+│   ├── 6a31c4d56a7f46f0b7d544cb0f6b5acfb6758b2b.nq.gz
+│   ├── 747ffb7b3033659bdd2d1e6eae41ecb00358a45e.nq.gz
+│   ├── 78e28a8bde2f5f7ecf4b5d751a88215daabfc78f.nq.gz
+│   ├── 79401bad34291ad71946742cb9aa9800ae8ff2eb.nq.gz
+│   ├── 79d31fb56b6de2eebdb370e142e20c35a680139d.nq.gz
+│   ├── 7a79a87b9ba127d160d95182387b39d99009e1da.nq.gz
+│   ├── 81cee6dbcda719d27fa2064c2ecbfbec9560d695.nq.gz
+│   ├── 8ab1e05e49a6a9ae59be171cfe135900138a03ef.nq.gz
+│   ├── 8c6d98203d742e0bb9bbf2badd0f9952c679e314.nq.gz
+│   ├── 8dc754c397264ef92eac9ee49309d0f8aefbae62.nq.gz
+│   ├── 92408522739fab7361b5602c4491b727c7a3fe91.nq.gz
+│   ├── 93f54b4f3c04d253a957776e1a6b3cf8b2e438d1.nq.gz
+│   ├── 959f5eae262d77e75e39805bd9dfd976ff10a944.nq.gz
+│   ├── 968713f50cd7acc4730691dd78d571bb2b2de0e2.nq.gz
+│   ├── a0d541ef078cd94976a22cbbcfe6679a5a26d3cd.nq.gz
+│   ├── a25f2ac596f9b0be08cbb2685916522441eec3b9.nq.gz
+│   ├── a47e021613e9d207e8f881130361dd69a6ee4426.nq.gz
+│   ├── a7d8ca5fed4ef5f54eb95a2fdfc638b71a097bf7.nq.gz
+│   ├── b0697142ad317528ddc20818ae47255665461fda.nq.gz
+│   ├── b24b858c9e65eeaf2925f7a964a2bc81ae00524d.nq.gz
+│   ├── bb968bcb9aec8e6a8682cb81a7bded55899d1aa0.nq.gz
+│   ├── c5ca8e00108b6cf15656a8708de6ede229e2b75b.nq.gz
+│   ├── cbaa7c670bf80d65466fc5ac09db9bbd7f1eb045.nq.gz
+│   ├── d0c3cbf1020d5c292abdedf27627c6abe25e2293.nq.gz
+│   ├── d101ccdf76df967cb4c314926249051c022697a7.nq.gz
+│   ├── d9442d539c29d8e1822a91085937c53a3e141d40.nq.gz
+│   ├── da61de61ad9ff2116700ecf8282824de0eeaa8af.nq.gz
+│   ├── deeba8f732ca69ca51314af2068fba3791e31cd9.nq.gz
+│   ├── e4e078d85bae92c82f9b56bce43d71909a29a5a1.nq.gz
+│   ├── e56ff2c97d3b94017add4f13b6bb435f74dd39de.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── eb076b384a09bd9d3de33888d963ce457ad15816.nq.gz
+│   ├── fa03a9ab138a77f98c1e8397b91d5dbd581fd044.nq.gz
+│   ├── fa13f85680574b8c315af5f4dc94082b39f4e163.nq.gz
+│   └── fb65f8387a320ca2d58b30f2e7e3058dab42ad91.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 6379e7bd2129a8796acac34ae63d026241c8c760.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 63 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[xarray-contrib/xvec](https://github.com/xarray-contrib/xvec)
+
+---
+*Parsed on 2026-10-28 by [repolex](https://repolex.ai)*

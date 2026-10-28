@@ -1,0 +1,11 @@
+{
+  "org": "xarray-contrib",
+  "repo": "xvec",
+  "versions": [
+    {
+      "commit": "6379e7bd2129a8796acac34ae63d026241c8c760",
+      "tag": "",
+      "parsed_at": "2026-10-28T13:38:39.877832+00:00"
+    }
+  ]
+}
